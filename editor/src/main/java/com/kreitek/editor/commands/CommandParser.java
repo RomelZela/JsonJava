@@ -16,7 +16,7 @@ public class CommandParser {
     }
 
     private boolean isValidCommand(String commandLine) {
-        final String regex = "a \\\"([a-zA-ZÃ€-Ã¿\\u00f1\\u00d1]|[.,\\s\\/#!$%\\^&\\*;:{}=\\-_`~()â€â€œ\"â€¦]|\\s])*\\\"|d ([0-9])*|u ([0-9])* \\\"([[a-zA-ZÃ€-Ã¿\\u00f1\\u00d1]|[.,\\s\\/#!$%\\^&\\*;:{}=\\-_`~()â€â€œ\"â€¦]|\\s])*\\\"|undo|exit";
+    	final String regex = "a \\\"([a-zA-ZÀ-ÿ\\u00f1\\u00d1]|[.,\\s\\/#!$%\\^&\\*;:{}=\\-_`~()”“\"…]|\\s])*\\\"|d ([0-9])*|u ([0-9])* \\\"([[a-zA-ZÀ-ÿ\\u00f1\\u00d1]|[.,\\s\\/#!$%\\^&\\*;:{}=\\-_`~()”“\"…]|\\s])*\\\"|undo|exit";
         final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
         final Matcher matcher = pattern.matcher(commandLine);
 
